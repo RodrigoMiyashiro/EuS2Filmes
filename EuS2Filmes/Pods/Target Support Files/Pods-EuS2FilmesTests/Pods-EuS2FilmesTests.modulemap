@@ -1,0 +1,6 @@
+framework module Pods_EuS2FilmesTests {
+  umbrella header "Pods-EuS2FilmesTests-umbrella.h"
+
+  export *
+  module * { export * }
+}
