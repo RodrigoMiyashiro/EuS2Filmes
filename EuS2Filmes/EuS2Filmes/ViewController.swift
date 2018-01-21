@@ -8,14 +8,48 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController
+{
 
-    override func viewDidLoad() {
+    override func viewDidLoad()
+    {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        token()
+        sessionGuest()
+    }
+    
+    private func token()
+    {
+        APIManager.getToken { (token, error) in
+            if let token = token
+            {
+                print("-->> Token: \(token.requestToke ?? "")")
+            }
+            else
+            {
+                print("-->> Error token: \(error)")
+            }
+        }
+    }
+    
+    private func sessionGuest()
+    {
+        APIManager.getSessionGuest { (sessionGuest, error) in
+            if let sessionGuest = sessionGuest
+            {
+                print("-->> Session: \(sessionGuest.guestSessionID ?? "")")
+            }
+            else
+            {
+                print("-->> Error session: \(error)")
+            }
+        }
     }
 
-    override func didReceiveMemoryWarning() {
+    
+    override func didReceiveMemoryWarning()
+    {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
