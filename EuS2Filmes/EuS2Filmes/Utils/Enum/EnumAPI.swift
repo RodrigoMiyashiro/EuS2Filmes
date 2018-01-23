@@ -23,13 +23,13 @@ enum TypeURL
 
 enum APIAccess: String
 {
-    case url = "https://api.themoviedb.org/3/"
+    case url = "https://api.themoviedb.org/3"
 }
 
 
 enum ImgURL: String
 {
-    case img = "https://image.tmdb.org/t/p/"
+    case img = "https://image.tmdb.org/t/p"
 }
 
 
@@ -45,8 +45,8 @@ enum MovieDB: String
 
 enum APIExtensions: String
 {
-    case token = "authentication/token/new"
-    case sessionGuest = "authentication/guest_session/new"
+    case token = "/authentication/token/new"
+    case sessionGuest = "/authentication/guest_session/new"
 }
 
 
