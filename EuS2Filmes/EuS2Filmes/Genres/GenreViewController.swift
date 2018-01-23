@@ -8,7 +8,7 @@
 
 import UIKit
 
-class GenreViewController: UIViewController
+class GenreViewController: CustomViewController
 {
 
     // MARK: - Lets and Vars
@@ -105,14 +105,7 @@ class GenreViewController: UIViewController
             }
         }
     }
-    
-    // MARK: - Memory Warning
-    override func didReceiveMemoryWarning()
-    {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
+        
 
     /*
     // MARK: - Navigation

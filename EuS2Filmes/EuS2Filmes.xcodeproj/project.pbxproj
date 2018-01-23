@@ -33,6 +33,8 @@
 		5B35B9642016E68E008FBB51 /* MovieViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B35B9632016E68E008FBB51 /* MovieViewModel.swift */; };
 		5B35B9662016E6A2008FBB51 /* MovieDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B35B9652016E6A2008FBB51 /* MovieDetailViewController.swift */; };
 		5B35B9682016E6AC008FBB51 /* MovieDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B35B9672016E6AC008FBB51 /* MovieDetailViewModel.swift */; };
+		5B35B96E2016E908008FBB51 /* CustomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B35B96D2016E908008FBB51 /* CustomViewController.swift */; };
+		5B35B9702016EB0B008FBB51 /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B35B96F2016EB0B008FBB51 /* UIViewController.swift */; };
 		5B561AE92010F35D00F01C93 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B561AE82010F35D00F01C93 /* AppDelegate.swift */; };
 		5B561AEE2010F35D00F01C93 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5B561AEC2010F35D00F01C93 /* Main.storyboard */; };
 		5B561AF12010F35D00F01C93 /* EuS2Filmes.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 5B561AEF2010F35D00F01C93 /* EuS2Filmes.xcdatamodeld */; };
@@ -95,6 +97,8 @@
 		5B35B9632016E68E008FBB51 /* MovieViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieViewModel.swift; sourceTree = "<group>"; };
 		5B35B9652016E6A2008FBB51 /* MovieDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailViewController.swift; sourceTree = "<group>"; };
 		5B35B9672016E6AC008FBB51 /* MovieDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailViewModel.swift; sourceTree = "<group>"; };
+		5B35B96D2016E908008FBB51 /* CustomViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomViewController.swift; sourceTree = "<group>"; };
+		5B35B96F2016EB0B008FBB51 /* UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
 		5B561AE52010F35D00F01C93 /* EuS2Filmes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EuS2Filmes.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5B561AE82010F35D00F01C93 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5B561AED2010F35D00F01C93 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -237,6 +241,15 @@
 			path = Protocols;
 			sourceTree = "<group>";
 		};
+		5B35B96C2016E8F1008FBB51 /* Custom View Controller */ = {
+			isa = PBXGroup;
+			children = (
+				5B35B96D2016E908008FBB51 /* CustomViewController.swift */,
+			);
+			name = "Custom View Controller";
+			path = "New Group";
+			sourceTree = "<group>";
+		};
 		5B561ADC2010F35D00F01C93 = {
 			isa = PBXGroup;
 			children = (
@@ -264,6 +277,7 @@
 			children = (
 				5B561B1C2010FFF000F01C93 /* Utils */,
 				5B1B368E2014435A00D96CBC /* Model */,
+				5B35B96C2016E8F1008FBB51 /* Custom View Controller */,
 				5B561B1B2010FFEF00F01C93 /* Genres */,
 				5B561B1A2010FFEE00F01C93 /* Movie List */,
 				5B561B192010FFEC00F01C93 /* Movie Detail */,
@@ -331,21 +345,22 @@
 				5B561B202011002100F01C93 /* User Defaults */,
 				5B561B1F2011001F00F01C93 /* Error Control */,
 				5B561B1E2011001B00F01C93 /* Extension */,
-				5B561B1D2011001800F01C93 /* New Group */,
+				5B561B1D2011001800F01C93 /* Activity Indicator */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
 		};
-		5B561B1D2011001800F01C93 /* New Group */ = {
+		5B561B1D2011001800F01C93 /* Activity Indicator */ = {
 			isa = PBXGroup;
 			children = (
 			);
-			path = "New Group";
+			path = "Activity Indicator";
 			sourceTree = "<group>";
 		};
 		5B561B1E2011001B00F01C93 /* Extension */ = {
 			isa = PBXGroup;
 			children = (
+				5B35B96F2016EB0B008FBB51 /* UIViewController.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -725,7 +740,9 @@
 				5B561B252011006900F01C93 /* Request.swift in Sources */,
 				5B561B272011183700F01C93 /* APIManager.swift in Sources */,
 				5B561B2B20111DFF00F01C93 /* GeneratorURL.swift in Sources */,
+				5B35B9702016EB0B008FBB51 /* UIViewController.swift in Sources */,
 				5B1B36A12014D52D00D96CBC /* ListGenre.swift in Sources */,
+				5B35B96E2016E908008FBB51 /* CustomViewController.swift in Sources */,
 				5B1B369D2014469500D96CBC /* SessionGuest.swift in Sources */,
 				5B1B369F20144EA000D96CBC /* Genre.swift in Sources */,
 				5B1B36A52015762700D96CBC /* GenreViewModel.swift in Sources */,
