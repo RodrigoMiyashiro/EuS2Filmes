@@ -13,11 +13,18 @@ target 'EuS2Filmes' do
   target 'EuS2FilmesTests' do
     inherit! :search_paths
     # Pods for testing
+
+    pod 'Quick'
+    pod 'Nimble'
   end
 
   target 'EuS2FilmesUITests' do
     inherit! :search_paths
     # Pods for testing
+
+    pod 'Quick'
+    pod 'Nimble'
+    
   end
 
 end
