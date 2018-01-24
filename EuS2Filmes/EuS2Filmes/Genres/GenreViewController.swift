@@ -119,18 +119,65 @@ class GenreViewController: CustomViewController
 
 }
 
+// MARK: - Extension TableView DataSource
 extension GenreViewController: UITableViewDataSource
 {
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int
+    func numberOfSections(in tableView: UITableView) -> Int
     {
         return 10
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int
+    {
+        return 1
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell
     {
         let cellIdentifier = "genreCell"
-        let cell = genreTableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath)
+        let cell = genreTableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as! GenreTableViewCell
         
         return cell
     }
+}
+
+// MARK: - Extension TableView Delegate
+extension GenreViewController: UITableViewDelegate
+{
+    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String?
+    {
+        return "Title Genre"
+    }
+    
+    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath)
+    {
+        let row = indexPath.row
+        
+        guard let genreMovieTbCell = cell as? GenreTableViewCell else { return }
+        genreMovieTbCell.setCollectionViewDataSourceDelegate(dataSourceDelegate: self, forRow: row)
+    }
+}
+
+
+// MARK: - Extension CollectionView DataSource
+extension GenreViewController: UICollectionViewDataSource
+{
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int
+    {
+        return 10
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell
+    {
+        let cellIdentifier = "genreMovieCell"
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellIdentifier, for: indexPath) as! GenreMovieCollectionViewCell
+        
+        return cell
+    }
+}
+
+// MARK: - Extension CollectionView Delegate
+extension GenreViewController: UICollectionViewDelegate
+{
+    
 }
